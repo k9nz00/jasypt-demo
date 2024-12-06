@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: configuration-demo app
+
+jasypt:
+  encryptor:
+    password: ${ENCRYPTION_PASSWORD:password-for-encryption}
+    algorithm: PBEWithHMACSHA512AndAES_256
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui" #http://localhost:8080/swagger-ui/index.html
+  api-docs:
+    path: "/v1/api-docs"
+    enabled: true
